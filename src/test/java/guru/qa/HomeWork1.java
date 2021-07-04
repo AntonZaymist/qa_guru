@@ -52,7 +52,7 @@ public class HomeWork1 {
 
 //      Проверка
         $("#example-modal-sizes-title-lg").shouldHave(text("Thanks for submitting the form"));
-//      $x("//td[text()='Student Name']/following::td").shouldHave(text("Anton Jmishenko")); подсмотрел решение через xpath
+//      $x("//td[text()='Student Name']/following::td").shouldHave(text("Anton Jmishenko")); подсмотрелрешение через xpath
         $("tbody").$(byText("Student Name")).parent().shouldHave(text("Anton Jmishenko"));
         $("tbody").$(byText("Student Email")).parent().shouldHave(text("vakavaka@gmail.com"));
         $("tbody").$(byText("Gender")).parent().shouldHave(text("Male"));

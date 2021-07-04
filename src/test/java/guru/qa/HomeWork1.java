@@ -53,21 +53,18 @@ public class HomeWork1 {
 //      Проверка
         $("#example-modal-sizes-title-lg").shouldHave(text("Thanks for submitting the form"));
 //      $x("//td[text()='Student Name']/following::td").shouldHave(text("Anton Jmishenko")); подсмотрелрешение через xpath
-        $("tbody").$(byText("Student Name")).parent().shouldHave(text("Anton Jmishenko"));
-        $("tbody").$(byText("Student Email")).parent().shouldHave(text("vakavaka@gmail.com"));
-        $("tbody").$(byText("Gender")).parent().shouldHave(text("Male"));
-        $("tbody").$(byText("Mobile")).parent().shouldHave(text("9855553366"));
-        $("tbody").$(byText("Date of Birth")).parent().shouldHave(text("18 March,1999"));
-        $("tbody").$(byText("Subjects")).parent().shouldHave(text("Computer Science"));
-        $("tbody").$(byText("Hobbies")).parent().shouldHave(text("Sports"));
-        $("tbody").$(byText("Hobbies")).parent().shouldHave(text("Reading"));
-        $("tbody").$(byText("Picture")).parent().shouldHave(text("hqdefault-5.jpg"));
-        $("tbody").$(byText("Address")).parent().shouldHave(text("Moscow Krasnopresnenskaya, 12"));
-        $("tbody").$(byText("State and City")).parent().shouldHave(text("NCR Delhi"));
-
-// Пытался запустить тесты без метода .parent(), тест падал, долго ломал голову в итоге подсомотрел решение.
-// Почитал про родительский селектор, понял не особо много. Хотелось бы узнать зачем он нужен и можно ли обойтись без
-// вызова этого метода?
+//      $("tbody").$(byText("Student Name")).parent().shouldHave(text("Anton Jmishenko"));
+        $(".modal-body").shouldHave(text("Anton Jmishenko"));
+        $(".modal-body").shouldHave(text("vakavaka@gmail.com"));
+        $(".modal-body").shouldHave(text("Male"));
+        $(".modal-body").shouldHave(text("9855553366"));
+        $(".modal-body").shouldHave(text("18 March,1999"));
+        $(".modal-body").shouldHave(text("Computer Science"));
+        $(".modal-body").shouldHave(text("Sports"));
+        $(".modal-body").shouldHave(text("Reading"));
+        $(".modal-body").shouldHave(text("hqdefault-5.jpg"));
+        $(".modal-body").shouldHave(text("Moscow Krasnopresnenskaya, 12"));
+        $(".modal-body").shouldHave(text("NCR Delhi"));
 
 
     }
